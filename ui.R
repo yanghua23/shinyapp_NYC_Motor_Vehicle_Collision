@@ -18,7 +18,7 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                     
                     # Panel options: 
                     absolutePanel(id = 'controls', class = 'panel panel-default', fixed = TRUE, draggable = TRUE, 
-                                  top = 55, left = 42, right = 'auto', bottom = 'auto',
+                                  top = 50, left = 50, right = 'auto', bottom = 'auto',
                                   width = 320, height = 'auto',
                                   
                                   h3('Pick data'), 
@@ -161,10 +161,10 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                                plotOutput(outputId = 'flipbarPlotCauseBorough')
                         )
                       ),
-                      em('Note: To be more informative,'),br(),
-                      em('excluded two most common top items:'), br(),
-                      em('"Driver Inattention/Distraction"'), br(),
-                      em('"Failure to Yield Right-of-Way".')
+                      tags$small('Note: To be more informative,'),br(),
+                      tags$small('excluded two most common top items:'), br(),
+                      tags$small('"Driver Inattention/Distraction"'), br(),
+                      tags$small('"Failure to Yield Right-of-Way".')
                     ),
                       br(),
                     wellPanel(
@@ -176,10 +176,10 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                                plotOutput(outputId = 'flipbarPlotVehicleBorough')
                         )
                       ),
-                      em('Note: To be more informative,'), br(),
-                      em('excluded two most common top items:'), br(),
-                      em('"Passenger Vehicle",'), br(),
-                      em('"Sport Utility / Station Wagon".'),
+                      tags$small('Note: To be more informative,'), br(),
+                      tags$small('excluded two most common top items:'), br(),
+                      tags$small('"Passenger Vehicle",'), br(),
+                      tags$small('"Sport Utility / Station Wagon".'),
                       br()
                     ),
                     br()

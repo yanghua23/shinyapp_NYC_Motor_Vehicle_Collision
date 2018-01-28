@@ -253,7 +253,7 @@ function(input, output, session) {
            y='Collisions') +
       scale_fill_manual(values=c("#00CC66", "#3399FF",'red'), name=NULL, 
                         labels=c('No hurt', 'Injured', 'Lethal')) + 
-      scale_y_continous_hua() +
+      scale_y_continuous_hua() +
       theme_hua()   
   })
   
@@ -298,7 +298,7 @@ function(input, output, session) {
            y='Victims') +
       scale_fill_brewer(palette='Set1', name=NULL, 
                         labels=Vict) +
-      scale_y_continous_hua() +
+      scale_y_continuous_hua() +
       theme_hua()
     
   })
