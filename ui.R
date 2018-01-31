@@ -8,10 +8,43 @@
 #
 navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
 
+           #===================== Intro tab =====================
+           tabPanel('Introduction',
+                    div(
+                        class='coverDiv',
+                        tags$head(includeCSS('styles.css')), # custom styles
+                        
+                        absolutePanel(fixed = TRUE, draggable = FALSE, 
+                                      top = 80, left = 50, right = 'auto', bottom = 'auto',
+                                      width = 500, height = 'auto', 
+                                    
+                        div( class = 'coverTextDiv',
+                        
+                        h1('New York City Motor Vehicle Collision Data Visualization'),
+                        h3('Everybody loves the city.'),
+                        h3('Nobody likes car accidents.'),
+                        h3('Why bother look at the motor vehicle collision data?'),
+                        h3('Mainly, the interest here is to see what we can learn from those data to help better prevent and/or avoid collisions in the future.'),
+                        h3('The work done so far includes an interactive map tool and some preliminary data analysis result, to start with...'),
+                        br()
+                        )
+                        
+                        )
+                        
+                        # Another way to add image:
+                        #img(src = "airbnb_overview.jpg", height = 600, weight =700, align="center")
+                        #use Shiny’s HTML tag functions to center the image
+                        #https://stackoverflow.com/questions/34663099/how-to-center-an-image-in-a-shiny-app
+                        #HTML('<center><img src="NYC_cover_image.jpg", height = 600, weight =700 ></center>')
+                        
+                        )
+                    ),
+         
+           
            #===================== Map View tab =====================
            tabPanel('Map View',
                     div(class='outer',
-                        tags$head(includeCSS('styles.css') # custom styles
+                         tags$head(includeCSS('styles.css') # custom styles
                         ),
                         leafletOutput('myMap', width = '100%', height = '100%')
                     ),

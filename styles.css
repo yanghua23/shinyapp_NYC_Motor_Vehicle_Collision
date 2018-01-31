@@ -2,7 +2,7 @@ input[type="number"] {
   max-width: 80%;
 }
 
-div.outer {
+.outer {
   position: fixed;
   top: 41px;
   left: 0;
@@ -12,11 +12,33 @@ div.outer {
   padding: 0;
 }
 
+.coverDiv {
+  background-repeat: no-repeat; 
+  background-image: url("NYC_cover_image.jpg");
+  background-size: 100% 100%;
+  background-position: top right;
+  background-attachment: fixed;
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.coverTextDiv {
+  color: rgb(40, 55, 71);
+  background-color: rgb(248, 249, 249);
+  background-color: rgba(248, 249, 249, 0.6);
+}
+
 /* Customize fonts */
 body, label, input, button, select { 
   font-family: 'Helvetica Neue', Helvetica;
   font-weight: 200;
 }
+
 h1, h2, h3, h4 { font-weight: 400; }
 
 #controls {
