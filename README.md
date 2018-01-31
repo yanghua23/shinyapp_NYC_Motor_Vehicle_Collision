@@ -8,7 +8,7 @@ The work done so far includes
 1. provide a "map view" to help visualize the data on a city map, and 
 2. some exploratory data analysis graphs of the data.
 
-The full project app is available online at [shinyapps.io](https://yanghua23.shinyapps.io/shinyapp_NYC_Motor_Vehicle_Collision/). A detailed summary presentation can be found at [google slide](https://docs.google.com/presentation/d/1cKCIfQLJiUwfUUuLXcDBMbQyxzxN7h-fT-0xFjMEsuA/edit?usp=sharing).
+The full project app is available online at [shinyapps.io](https://yanghua23.shinyapps.io/shinyapp_NYC_Motor_Vehicle_Collision/). A detailed summary presentation can be found at [google slides](https://docs.google.com/presentation/d/1cKCIfQLJiUwfUUuLXcDBMbQyxzxN7h-fT-0xFjMEsuA/edit?usp=sharing).
 
 Any comments/suggestions/questions are very welcome.
 
