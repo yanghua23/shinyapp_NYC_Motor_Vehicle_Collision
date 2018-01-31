@@ -76,6 +76,7 @@ function(input, output, session) {
   output$myMap = renderLeaflet({
     leaflet() %>%
       addTiles() %>%
+      #addProviderTiles("Esri.WorldStreetMap") %>%
       #addProviderTiles('CartoDB.DarkMatter') %>% # dark background map
       setView(lng = -73.935242, lat = 40.730610, zoom = 11)
   })

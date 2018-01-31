@@ -15,8 +15,8 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                         tags$head(includeCSS('styles.css')), # custom styles
                         
                         absolutePanel(fixed = TRUE, draggable = FALSE, 
-                                      top = 80, left = 50, right = 'auto', bottom = 'auto',
-                                      width = 500, height = 'auto', 
+                                      top = 60, left = 50, right = 'auto', bottom = 'auto',
+                                      width = 550, height = 'auto', 
                                     
                         div( class = 'coverTextDiv',
                         
@@ -24,8 +24,9 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                         h3('Everybody loves the city.'),
                         h3('Nobody likes car accidents.'),
                         h3('Why bother look at the motor vehicle collision data?'),
-                        h3('Mainly, the interest here is to see what we can learn from those data to help better prevent and/or avoid collisions in the future.'),
+                        h3('Mainly, the interest here is to see what we can learn from the data to help better prevent and/or avoid collisions in the future.'),
                         h3('The work done so far includes an interactive map tool and some preliminary data analysis result, to start with...'),
+                        h3('Thank you!'),
                         br()
                         )
                         
@@ -42,7 +43,7 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
          
            
            #===================== Map View tab =====================
-           tabPanel('Map View',
+           tabPanel('Map View', inputId = 'mapViewTab',
                     div(class='outer',
                          tags$head(includeCSS('styles.css') # custom styles
                         ),
@@ -51,10 +52,10 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                     
                     # Panel options: 
                     absolutePanel(id = 'controls', class = 'panel panel-default', fixed = TRUE, draggable = TRUE, 
-                                  top = 50, left = 50, right = 'auto', bottom = 'auto',
+                                  top = 40, left = 40, right = 'auto', bottom = 'auto',
                                   width = 320, height = 'auto',
                                   
-                                  h3('Pick data'), 
+                                  #h3('Pick data & Set map'), 
                                   
                                   fluidRow(
                                     column(6,
@@ -87,7 +88,7 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                                   
                                   fluidRow(
                                     column(6,
-                                           checkboxInput('showHeatMap', label = h4('Heat map'), value = TRUE)
+                                           checkboxInput('showHeatMap', label = h4('Heat map'), value = FALSE)
                                     ),
                                     
                                     column(6,
@@ -216,6 +217,15 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                       br()
                     ),
                     br()
-           )
+           ),
            
+           #===================== References tab =====================
+           tabPanel("References",
+ 
+                    h3("Detailed summary presentation of the work", a("Link", href="https://docs.google.com/presentation/d/1cKCIfQLJiUwfUUuLXcDBMbQyxzxN7h-fT-0xFjMEsuA/edit?usp=sharing")),
+                  
+                    h3("Source code on Github", a("Link", href="https://github.com/yanghua23/shinyapp_NYC_Motor_Vehicle_Collision")),
+                    
+                    h3("Original dataset from NYC OpenData", a("Link", href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95"))
+           )
 )
