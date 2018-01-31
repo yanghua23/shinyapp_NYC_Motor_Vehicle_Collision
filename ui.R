@@ -33,7 +33,7 @@ navbarPage('NYC Motor Vehicle Collision', theme = shinytheme("superhero"),
                         
                         # Another way to add image:
                         #img(src = "airbnb_overview.jpg", height = 600, weight =700, align="center")
-                        #use Shiny’s HTML tag functions to center the image
+                        #use HTML tag functions to center the image
                         #https://stackoverflow.com/questions/34663099/how-to-center-an-image-in-a-shiny-app
                         #HTML('<center><img src="NYC_cover_image.jpg", height = 600, weight =700 ></center>')
                         
